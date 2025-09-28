@@ -1,1 +1,16 @@
+/* app.css */
+
 @import "tailwindcss";
+
+@theme {
+  /* Extend Colors using the --color-* namespace */
+  --color-primary: rgb(76, 175, 80);       /* Utility: bg-primary, text-primary */
+  --color-secondary: rgb(0, 150, 136);     /* Utility: bg-secondary, text-secondary */
+  --color-accent: rgb(255, 152, 0);        /* Utility: bg-accent, text-accent */
+  --color-background: rgb(18, 18, 18);     /* Utility: bg-background, text-background */
+  --color-panel: rgb(30, 30, 30);          /* Utility: bg-panel, text-panel */
+  --color-textLight: rgb(224, 224, 224);   /* Utility: bg-textLight, text-textLight */
+   
+  --font-sans: "Inter", sans-serif;         
+  --font-heading: "Space Grotesk", sans-serif;
+}
