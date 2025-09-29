@@ -11,42 +11,46 @@ import GraphChart from "./pages/GraphChart";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 
+// Games
+import Games from "./pages/Games";
+import BloomMatcher from "./pages/games/BloomMatcher";
+import PollenCollector from "./pages/games/PollenCollector";
+import BloomSequence from "./pages/games/BloomSequence";
+import PlantGrowth from "./pages/games/PlantGrowth";
+import FlowerMatch from "./pages/games/FlowerMatch";
+import BloomTimeline from "./pages/games/BloomTimeline";
+import GameLayout from "./GameLayout";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     errorElement: <NotFound />,
     children: [
-      {
-        index: true, // 👈 means "/" will load Dashboard by default
-        element: <Dashboard />,
-      },
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "map",
-        element: <Map />,
-      },
-      {
-        path: "filtering-data",
-        element: <FilteringData />,
-      },
-      {
-        path: "graph-chart",
-        element: <GraphChart />,
-      },
-      {
-        path: "about-us",
-        element: <AboutUs />,
-      },
-      {
-        path: "contact-us",
-        element: <Contact />,
-      },
+      { index: true, element: <Dashboard /> },
+      { path: "dashboard", element: <Dashboard /> },
+      { path: "map", element: <Map /> },
+      { path: "filtering-data", element: <FilteringData /> },
+      { path: "graph-chart", element: <GraphChart /> },
+      { path: "about-us", element: <AboutUs /> },
+      { path: "contact-us", element: <Contact /> },
+      { path: "games", element: <Games /> }
     ],
   },
+  {
+    path: "/games",
+    element: <GameLayout />,
+    errorElement: <NotFound />,
+    children: [
+      { path: "bloom-matcher", element: <BloomMatcher /> },
+      { path: "pollen-collector", element: <PollenCollector /> },
+      { path: "bloom-sequence", element: <BloomSequence /> },
+      { path: "plant-growth", element: <PlantGrowth /> },
+      { path: "flower-match", element: <FlowerMatch /> },
+      { path: "bloom-timeline", element: <BloomTimeline /> },
+
+    ]
+  }
 ]);
 
 export default router;

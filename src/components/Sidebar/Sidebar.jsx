@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom"; // ✅ Import for navigati
 import {
   Home,
   Map,
+  Gamepad2,
   Sliders,
   BarChart2,
   Info,
@@ -36,6 +37,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     { name: "Map", path: "/map", icon: <Map size={20} /> },
     { name: "Filtering Data", path: "/filtering", icon: <Sliders size={20} /> },
     { name: "Graph-Chart", path: "/graph-chart", icon: <BarChart2 size={20} /> },
+    { name: "Games", path: "/games", icon: <Gamepad2  size={20} /> },
   ];
 
   const supportItems = [
