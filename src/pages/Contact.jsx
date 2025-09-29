@@ -26,7 +26,7 @@ const team = [
 function Contact() {
   return (
     <div className="min-h-screen bg-background w-full text-textLight font-sans">
-      <div className="mx-auto px-6 py-20">
+      <div className="mx-auto px-6 py-12">
         {/* Title */}
         <h1 className="text-4xl font-heading font-bold text-primary mb-10">
           Meet Our Team

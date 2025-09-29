@@ -3,7 +3,7 @@ import  global_vegetation_img from "../assets/global_vegetation.jpeg"
 function AboutUs() {
   return (
     <div className="min-h-screen bg-background w-full text-textLight font-sans">
-      <div className="w-full mx-auto px-6 py-20">
+      <div className="w-full mx-auto px-6 py-12">
         {/* Title */}
         <h1 className="text-4xl font-heading font-bold text-primary mb-6">
           About BloomWatch
