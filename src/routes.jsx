@@ -9,6 +9,7 @@ import Map from "./pages/Map";
 import FilteringData from "./pages/FilteringData";
 import GraphChart from "./pages/GraphChart";
 import AboutUs from "./pages/AboutUs";
+import CropPrediction from "./pages/CropPrediction";
 import Contact from "./pages/Contact";
 
 // Games
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       { path: "graph-chart", element: <GraphChart /> },
       { path: "about-us", element: <AboutUs /> },
       { path: "contact-us", element: <Contact /> },
+      { path: "predict-crop", element: <CropPrediction /> },
       { path: "games", element: <Games /> }
     ],
   },

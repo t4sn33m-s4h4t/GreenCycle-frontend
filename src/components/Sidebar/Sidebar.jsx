@@ -37,6 +37,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     { name: "Map", path: "/map", icon: <Map size={20} /> },
     { name: "Filtering Data", path: "/filtering", icon: <Sliders size={20} /> },
     { name: "Graph-Chart", path: "/graph-chart", icon: <BarChart2 size={20} /> },
+    { name: "Predict Crop", path: "/predict-crop", icon: <BarChart2 size={20} /> },
     { name: "Games", path: "/games", icon: <Gamepad2  size={20} /> },
   ];
 
