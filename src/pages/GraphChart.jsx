@@ -23,8 +23,8 @@ const Charts = () => {
   const [loading, setLoading] = useState(false);
   const [latitude, setLatitude] = useState(23.8041);
   const [longitude, setLongitude] = useState(90.4152);
-  const [startDate, setStartDate] = useState("2023-04-01");
-  const [endDate, setEndDate] = useState("2023-04-03");
+  const [startDate, setStartDate] = useState("2025-09-25");
+  const [endDate, setEndDate] = useState("2025-09-29");
   const [showGuidelines, setShowGuidelines] = useState(false);
 
   // Color schemes
@@ -107,15 +107,42 @@ const Charts = () => {
     }));
   };
 
-  const getSummaryData = () => {
-    if (!weatherData) return [];
-    
-    return [
-      { name: 'Temperature', value: Math.round(weatherData.summary.temperature.daily_average) },
-      { name: 'Rainfall', value: Math.round(weatherData.summary.rainfall.total) },
-      { name: 'Solar', value: Math.round(weatherData.summary.solar_radiation.daily_average * 10) }
-    ];
-  };
+ const getSummaryData = () => {
+  if (!weatherData) return [];
+  
+  const tempValue = Math.round(weatherData.summary.temperature.daily_average * 100) / 100;
+  const rainValue = Math.round(weatherData.summary.rainfall.total * 100) / 100;
+  const solarValue = Math.round(weatherData.summary.solar_radiation.daily_average * 1000) / 1000;
+
+  // Ensure minimum values to prevent pie chart issues
+  const data = [
+    { 
+      name: 'Temperature', 
+      value: Math.max(tempValue, 0.1), // Minimum 0.1 to prevent chart issues
+      actualValue: tempValue,
+      unit: '°C'
+    },
+    { 
+      name: 'Rainfall', 
+      value: Math.max(rainValue, 0.1), // Minimum 0.1
+      actualValue: rainValue,
+      unit: 'mm'
+    },
+    { 
+      name: 'Solar', 
+      value: Math.max(solarValue, 0.001), // Minimum 0.001 for solar
+      actualValue: solarValue,
+      unit: 'MJ/hr'
+    }
+  ];
+
+  // Filter out any invalid data and ensure we have at least one valid entry
+  const validData = data.filter(item => !isNaN(item.value) && isFinite(item.value));
+  
+  return validData.length > 0 ? validData : [
+    { name: 'No Data', value: 1, actualValue: 0, unit: '' }
+  ];
+};
 
   const PIE_COLORS = [colors.temperature, colors.rainfall, colors.solar];
 
