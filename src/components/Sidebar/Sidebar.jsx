@@ -10,8 +10,8 @@ import {
   Menu,
 } from "lucide-react";
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false); // collapsed by default (mobile)
+const Sidebar = ({ isOpen, setIsOpen }) => {
+  
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
   const location = useLocation(); // ✅ lets us detect the active route
 
@@ -46,7 +46,7 @@ const Sidebar = () => {
   return (
     <div
       className={`fixed top-0 left-0 h-screen bg-panel text-textLight border-r border-gray-700 transition-all duration-300 ease-in-out z-50
-        ${isOpen ? "w-56" : "w-16"}`}
+        ${isOpen ? "w-56" : "w-12"}`}
     >
       {/* Top Section */}
       <div className="flex items-center justify-between px-4 h-14 border-b border-gray-700">
@@ -62,7 +62,7 @@ const Sidebar = () => {
         {!isDesktop && (
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-md hover:bg-primary/20 transition-colors"
+            className="rounded-md hover:bg-primary/20 transition-colors"
           >
             <Menu size={22} />
           </button>
