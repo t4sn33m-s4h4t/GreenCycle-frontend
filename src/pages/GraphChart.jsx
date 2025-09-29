@@ -23,8 +23,8 @@ const Charts = () => {
   const [loading, setLoading] = useState(false);
   const [latitude, setLatitude] = useState(23.8041);
   const [longitude, setLongitude] = useState(90.4152);
-  const [startDate, setStartDate] = useState("2025-09-25");
-  const [endDate, setEndDate] = useState("2025-09-29");
+  const [startDate, setStartDate] = useState("2025-09-18");
+  const [endDate, setEndDate] = useState("2025-09-27");
   const [showGuidelines, setShowGuidelines] = useState(false);
 
   // Color schemes
