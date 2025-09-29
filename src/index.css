@@ -4,8 +4,8 @@
 
 @theme {
   /* Extend Colors using the --color-* namespace */
-  --color-primary: rgb(76, 175, 80);       /* Utility: bg-primary, text-primary */
-  --color-secondary: rgb(0, 150, 136);     /* Utility: bg-secondary, text-secondary */
+  --color-primary: rgb(76, 175, 80);       
+  --color-secondary: rgb(0, 150, 136);     
   --color-accent: rgb(255, 152, 0);        /* Utility: bg-accent, text-accent */
   --color-background: rgb(18, 18, 18);     /* Utility: bg-background, text-background */
   --color-panel: rgb(30, 30, 30);          /* Utility: bg-panel, text-panel */
