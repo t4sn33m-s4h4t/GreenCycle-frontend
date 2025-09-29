@@ -17,16 +17,16 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard />
       },
- {
-    path: "about-us",
-    element: <AboutUs />
-  },
-  {
-    path: "contact-us",
-    element: <Contact />
-  },
+      {
+        path: "about-us",
+        element: <AboutUs />
+      },
+      {
+        path: "contact-us",
+        element: <Contact />
+      },
     ]
   },
- 
+
 ]);
 export default router;
