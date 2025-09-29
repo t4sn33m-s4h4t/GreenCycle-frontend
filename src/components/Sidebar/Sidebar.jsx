@@ -46,7 +46,7 @@ const Sidebar = () => {
   return (
     <div
       className={`fixed top-0 left-0 h-screen bg-panel text-textLight border-r border-gray-700 transition-all duration-300 ease-in-out z-50
-        ${isOpen ? "w-64" : "w-16"}`}
+        ${isOpen ? "w-56" : "w-16"}`}
     >
       {/* Top Section */}
       <div className="flex items-center justify-between px-4 h-14 border-b border-gray-700">
