@@ -1,8 +1,9 @@
 // pages/About.jsx
+import  global_vegetation_img from "../assets/global_vegetation.jpeg"
 function AboutUs() {
   return (
-    <div className="min-h-screen bg-background text-textLight font-sans">
-      <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="min-h-screen bg-background w-full text-textLight font-sans">
+      <div className="w-full mx-auto px-6 py-20">
         {/* Title */}
         <h1 className="text-4xl font-heading font-bold text-primary mb-6">
           About BloomWatch
@@ -10,9 +11,7 @@ function AboutUs() {
 
         {/* Image Placeholder */}
         <div className="w-full h-64 bg-panel flex items-center justify-center rounded-xl mb-8">
-          <p className="text-textLight opacity-70">
-            [Image: Satellite imagery of global vegetation / flowers blooming]
-          </p>
+          <img src={global_vegetation_img} alt="Global Vegetation" className="w-full h-full object-cover rounded-xl" />
         </div>
 
         {/* Description */}
