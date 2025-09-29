@@ -1,12 +1,16 @@
-import {
-  createBrowserRouter,
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
-import AboutUs from "./pages/AboutUs"
-import Contact from "./pages/Contact"
 import Layout from "./Layout";
 import NotFound from "./pages/NotFound";
-import Dashboard from "./pages/dashboard";
+
+// Pages
+import Dashboard from "./pages/Dashboard";
+import Map from "./pages/Map";
+import FilteringData from "./pages/FilteringData";
+import GraphChart from "./pages/GraphChart";
+import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,19 +18,35 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: "/dashboard",
-        element: <Dashboard />
+        index: true, // 👈 means "/" will load Dashboard by default
+        element: <Dashboard />,
+      },
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "map",
+        element: <Map />,
+      },
+      {
+        path: "filtering-data",
+        element: <FilteringData />,
+      },
+      {
+        path: "graph-chart",
+        element: <GraphChart />,
       },
       {
         path: "about-us",
-        element: <AboutUs />
+        element: <AboutUs />,
       },
       {
         path: "contact-us",
-        element: <Contact />
+        element: <Contact />,
       },
-    ]
+    ],
   },
-
 ]);
+
 export default router;
