@@ -4,7 +4,7 @@ import Layout from "./Layout";
 import NotFound from "./pages/NotFound";
 
 // Pages
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/dashboard";
 import Map from "./pages/Map";
 import FilteringData from "./pages/FilteringData";
 import GraphChart from "./pages/GraphChart";
