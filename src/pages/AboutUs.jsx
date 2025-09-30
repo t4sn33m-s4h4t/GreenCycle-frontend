@@ -1,41 +1,99 @@
-// pages/About.jsx
-import  global_vegetation_img from "../assets/global_vegetation.jpeg"
-function AboutUs() {
+// src/pages/AboutUs.jsx
+import React from "react";
+import global_vegetation_img from "../assets/global_vegetation.jpeg";
+
+/**
+ * About page — modern hero + product-like panels.
+ * - Uses hero image, glass-style cards, and subtle micro-interactions.
+ * - Keep copy concise and "futuristic" tone, like product pages.
+ */
+
+export default function AboutUs() {
   return (
     <div className="min-h-screen bg-background w-full text-textLight font-sans">
-      <div className="w-full mx-auto px-6 py-12">
-        {/* Title */}
-        <h1 className="text-4xl font-heading font-bold text-primary mb-6">
-          About BloomWatch
-        </h1>
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        {/* Hero */}
+        <header className="grid gap-8 lg:grid-cols-2 items-center mb-10">
+          <div>
+            <h1 className="text-5xl font-heading font-bold text-primary leading-tight">
+              BloomWatch
+            </h1>
+            <p className="mt-4 text-lg text-textLight/80 max-w-xl">
+              Visualize global flowering phenology through satellite observations.
+              We translate greenness and climate signals into actionable insights —
+              for agriculture, ecology, and conservation.
+            </p>
 
-        {/* Image Placeholder */}
-        <div className="w-full h-64 bg-panel flex items-center justify-center rounded-xl mb-8">
-          <img src={global_vegetation_img} alt="Global Vegetation" className="w-full h-full object-cover rounded-xl" />
-        </div>
+            <div className="mt-6 flex gap-3">
+              <a
+                href="/map"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-accent text-black font-semibold hover:scale-105 transition"
+              >
+                Explore Map
+              </a>
+              <a
+                href="/dashboard"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-gray-700"
+              >
+                View Dashboard
+              </a>
+            </div>
+          </div>
 
-        {/* Description */}
-        <p className="text-lg leading-relaxed mb-6">
-          BloomWatch is our solution for{" "}
-          <span className="text-accent font-semibold">
-            NASA Space Apps Challenge 2025
-          </span>
-          . Our mission is to visualize, detect, and monitor plant blooming
-          events around the world using NASA’s Earth observation data.
-        </p>
+          {/* Hero Image */}
+          <div className="w-full h-64 rounded-xl overflow-hidden bg-panel shadow-xl">
+            <img
+              src={global_vegetation_img}
+              alt="Global vegetation"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </header>
 
-        <p className="text-lg leading-relaxed">
-          From deserts to agricultural lands, seasonal flowering cycles tell the
-          story of ecosystems, pollinators, and global climate. Our tool is
-          designed to provide actionable insights for{" "}
-          <span className="text-secondary font-semibold">
-            agriculture, ecology, and conservation
-          </span>{" "}
-          at both local and global scales.
-        </p>
+        {/* Value cards */}
+        <section className="grid gap-6 md:grid-cols-3 mb-10">
+          <div className="bg-panel rounded-2xl p-6 shadow hover:shadow-2xl transition transform hover:-translate-y-1">
+            <h3 className="font-heading text-lg text-primary mb-2">Research-Grade</h3>
+            <p className="text-sm text-textLight/70">
+              Built on NASA remote sensing datasets and phenology metrics — credible and reproducible.
+            </p>
+          </div>
+
+          <div className="bg-panel rounded-2xl p-6 shadow hover:shadow-2xl transition transform hover:-translate-y-1">
+            <h3 className="font-heading text-lg text-primary mb-2">Interactive</h3>
+            <p className="text-sm text-textLight/70">
+              Live NDVI overlays, filters by biome/region, and time sliders for historical comparisons.
+            </p>
+          </div>
+
+          <div className="bg-panel rounded-2xl p-6 shadow hover:shadow-2xl transition transform hover:-translate-y-1">
+            <h3 className="font-heading text-lg text-primary mb-2">Actionable</h3>
+            <p className="text-sm text-textLight/70">
+              Bloom alerts and simple predictive models help farmers and researchers plan and respond.
+            </p>
+          </div>
+        </section>
+
+        {/* Long-form description */}
+        <article className="bg-panel rounded-xl p-6 shadow-lg">
+          <h2 className="text-2xl font-heading font-semibold text-primary mb-4">
+            Why BloomWatch?
+          </h2>
+          <p className="text-lg leading-relaxed text-textLight/80 mb-4">
+            Seasonal flowering patterns are a fingerprint of ecosystem health, crop cycles, and
+            climate shifts. Satellites don’t see petals — but they do record vegetation activity.
+            We combine those signals with climate overlays to estimate when landscapes enter their
+            bloom phase.
+          </p>
+
+          <p className="text-lg leading-relaxed text-textLight/80">
+            This project is designed as a research tool — not a consumer app. Expect transparent
+            methods, reproducible data pipelines, and clear descriptions of uncertainty. Our goal is
+            to help scientists, policy makers, and communities understand phenological change at
+            scale.
+          </p>
+        </article>
       </div>
     </div>
   );
 }
-
-export default AboutUs;
