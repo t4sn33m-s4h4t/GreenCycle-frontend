@@ -9,6 +9,8 @@ import {
   Info,
   Phone,
   Menu,
+  Sprout,
+  Users,
 } from "lucide-react";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
@@ -34,16 +36,16 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   // ✅ Navigation items (with route paths)
   const menuItems = [
     { name: "Dashboard", path: "/dashboard", icon: <Home size={20} /> },
-    { name: "Map", path: "/map", icon: <Map size={20} /> },
-    { name: "Filtering Data", path: "/filtering", icon: <Sliders size={20} /> },
+    { name: "Map", path: "/map", icon: <Map size={20} /> }, 
     { name: "Graph-Chart", path: "/graph-chart", icon: <BarChart2 size={20} /> },
-    { name: "Predict Crop", path: "/predict-crop", icon: <BarChart2 size={20} /> },
+    { name: "Predict Crop", path: "/predict-crop", icon: <Sprout size={20} /> },
     { name: "Games", path: "/games", icon: <Gamepad2  size={20} /> },
+    { name: "Solutions", path: "/solutions", icon: <Sliders size={20} /> },
   ];
 
   const supportItems = [
     { name: "About Us", path: "/about-us", icon: <Info size={20} /> },
-    { name: "Contact", path: "/contact-us", icon: <Phone size={20} /> },
+    { name: "Team", path: "/team", icon: <Users size={20} /> },
   ];
 
   return (
@@ -57,9 +59,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         {isOpen && (
           <Link
             to="/"
-            className="font-heading text-lg text-textLight hover:text-primary transition-colors"
+            className="font-heading mx-auto mt-6 text-textLight hover:text-primary transition-colors"
           >
-            BloomWatch
+             <h3 className="text-2xl font-bold text-textLight mb-6">
+              Bloom
+              <span className="text-primary"> Watch</span>
+            </h3>
           </Link>
         )}
         {!isDesktop && (

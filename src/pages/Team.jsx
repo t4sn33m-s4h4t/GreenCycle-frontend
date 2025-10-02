@@ -1,9 +1,16 @@
-// src/pages/Contact.jsx
+// src/pages/Team.jsx
 import React from "react";
-import { Mail, Globe, Linkedin, Github } from "lucide-react";
+import { Mail, Github, Facebook } from "lucide-react";
+
+// Import team member images
+import nafisImage from "../assets/2.jpg";
+import arnabImage from "../assets/1.jpg";
+import prithishImage from "../assets/3.jpg";
+import amritoImage from "../assets/4.jpg";
+import tasneemImage from "../assets/5.jpg";
 
 /**
- * Contact page — modern "product" cards for team members.
+ * Team page — modern "product" cards for team members.
  * - Uses your theme tokens (bg-panel, text-primary, accent colors).
  * - Responsive grid with subtle scale + shadow hover.
  * - External links open in new tab with safe rel attributes.
@@ -13,35 +20,48 @@ const team = [
   {
     name: "Tasneem Al Sahat",
     role: "Full Stack Developer",
-    email: "tasneem@example.com",
-    website: "https://facebook.com/your-profile",
-    linkedin: "https://linkedin.com/in/your-profile",
-    github: "https://github.com/your-profile",
-    image: "https://via.placeholder.com/300?text=TAS", // replace with real portrait
-  },
-  {
-    name: "John Doe",
-    role: "Data Scientist",
-    email: "johndoe@example.com",
-    website: "https://facebook.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-    github: "https://github.com/johndoe",
-    image: "https://via.placeholder.com/300?text=JD",
+    email: "mdsahat6397@gmail.com",
+    website: "https://www.facebook.com/t4sn33m.s4h4t/",
+    github: "https://github.com/t4sn33m-s4h4t",
+    image: tasneemImage,
   },
   {
     name: "Mohammad Nafis Fuad",
-    role: "Front-end Developer",
-    email: "nafis@example.com",
-    website: "https://example.com",
-    linkedin: "https://linkedin.com/in/nafis2024",
+    role: "Frontend Developer",
+    email: "nafisfuad2024@gmail.com",
+    website: "https://facebook.com/mn.fuad26",
     github: "https://github.com/nafis2024",
-    image: "https://via.placeholder.com/300?text=NF",
+    image: nafisImage,
+  },
+  {
+    name: "Arnab Barua",
+    role: "Backend Developer",
+    email: "arnabxarnab06@gmail.com",
+    website: "https://www.facebook.com/arnab.barua.2025/",
+    github: "https://github.com/your-profile",
+    image: arnabImage,
+  },
+  {
+    name: "Prithish Ranjon Das",
+    role: "Designer",
+    email: "Prd200600@gmail.com",
+    website: "https://www.facebook.com/share/17TEGefWhE/",
+    github: "https://github.com/prithish-7",
+    image: prithishImage,
+  },
+  {
+    name: "Amrito Toppo",
+    role: "UI/UX Designer",
+    email: "amritot500@gmail.com",
+    website: "https://www.facebook.com/Amrito.EXE09/",
+    github: "https://github.com/amri36",
+    image: amritoImage,
   },
 ];
 
-export default function Contact() {
+export default function Team() {
   return (
-    <div className="min-h-screen bg-background w-full text-textLight font-sans">
+    <div className="min-h-screen bg-background w-full text-textLight font-sans overflow-auto">
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Header / Hero */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
@@ -50,19 +70,9 @@ export default function Contact() {
               Meet the Team
             </h1>
             <p className="mt-2 text-lg text-textLight/80 max-w-xl">
-              The minds behind BloomWatch — engineers, scientists, and designers turning satellite
+              The minds behind BloomWatch — developers and designers turning satellite
               observations into actionable phenology insights.
             </p>
-          </div>
-
-          <div className="flex items-center gap-3">
-            {/* small subtle CTA */}
-            <a
-              href="#team"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel/60 border border-gray-700 hover:scale-105 transition-transform text-sm"
-            >
-              View Team
-            </a>
           </div>
         </div>
 
@@ -105,20 +115,10 @@ export default function Contact() {
                   href={member.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${member.name} website`}
+                  aria-label={`${member.name} Facebook`}
                   className="p-3 rounded-md bg-panel/50 hover:bg-primary/10 transition-colors"
                 >
-                  <Globe size={18} />
-                </a>
-
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${member.name} linkedin`}
-                  className="p-3 rounded-md bg-panel/50 hover:bg-primary/10 transition-colors"
-                >
-                  <Linkedin size={18} />
+                  <Facebook size={18} />
                 </a>
 
                 <a
@@ -132,11 +132,19 @@ export default function Contact() {
                 </a>
               </div>
 
-              {/* optional: short bio or badges */}
+              {/* Short bio based on role */}
               <p className="mt-4 text-sm text-textLight/70">
-                {member.role === "Front-end Developer"
-                  ? "Frontend engineer — building sleek UI and data interactions."
-                  : "Passionate contributor to BloomWatch."}
+                {member.role === "Full Stack Developer"
+                  ? "Full-stack development and system architecture for BloomWatch."
+                  : member.role === "Frontend Developer"
+                  ? "Building sleek UI and data interactions for BloomWatch."
+                  : member.role === "Backend Developer"
+                  ? "Developing robust server infrastructure and APIs."
+                  : member.role === "Designer"
+                  ? "Strategic designer and editor for BloomWatch platform."
+                  : member.role === "UI/UX Designer"
+                  ? "Creative design expert focused on user experience excellence."
+                  : "Passionate contributor to BloomWatch platform."}
               </p>
             </article>
           ))}

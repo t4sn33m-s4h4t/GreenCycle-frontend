@@ -10,7 +10,7 @@ import FilteringData from "./pages/FilteringData";
 import GraphChart from "./pages/GraphChart";
 import AboutUs from "./pages/AboutUs";
 import CropPrediction from "./pages/CropPrediction";
-import Contact from "./pages/Contact";
+import Team from "./pages/Team";
 
 // Games
 import Games from "./pages/Games";
@@ -21,6 +21,7 @@ import PlantGrowth from "./pages/games/PlantGrowth";
 import FlowerMatch from "./pages/games/FlowerMatch";
 import BloomTimeline from "./pages/games/BloomTimeline";
 import GameLayout from "./GameLayout";
+import Solutions from "./pages/Solutions";
 
 const router = createBrowserRouter([
   {
@@ -34,9 +35,10 @@ const router = createBrowserRouter([
       { path: "filtering-data", element: <FilteringData /> },
       { path: "graph-chart", element: <GraphChart /> },
       { path: "about-us", element: <AboutUs /> },
-      { path: "contact-us", element: <Contact /> },
+      { path: "team", element: <Team /> },
       { path: "predict-crop", element: <CropPrediction /> },
-      { path: "games", element: <Games /> }
+      { path: "games", element: <Games /> },
+      { path: "solutions", element: <Solutions /> }
     ],
   },
   {

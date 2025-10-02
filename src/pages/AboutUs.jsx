@@ -10,7 +10,7 @@ import global_vegetation_img from "../assets/global_vegetation.jpeg";
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen bg-background w-full text-textLight font-sans">
+    <div className="min-h-screen bg-background w-full text-textLight font-sans overflow-auto ">
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Hero */}
         <header className="grid gap-8 lg:grid-cols-2 items-center mb-10">

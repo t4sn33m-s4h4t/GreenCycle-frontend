@@ -44,8 +44,7 @@ const Charts = () => {
       return;
     }
 
-    try {
-      console.log(import.meta.env.VITE_BACKEND_URL)
+    try { 
       setLoading(true);
       const res = await axios.get(
         `${import.meta.env.VITE_BACKEND_URL}/api/weather`,

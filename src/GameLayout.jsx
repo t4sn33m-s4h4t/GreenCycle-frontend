@@ -65,7 +65,7 @@ function GameLayout() {
   };
 
   return (
-    <div className="flex h-screen bg-background text-textLight font-sans">
+    <div className="flex h-screen  custom-scrollbar bg-background text-textLight font-sans">
       {/* Main Sidebar */}
       <div className={` ${isOpen ? "w-56" : "w-12"} shadow-lg`}>
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
