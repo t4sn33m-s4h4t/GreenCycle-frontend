@@ -62,8 +62,8 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             className="font-heading mx-auto mt-6 text-textLight hover:text-primary transition-colors"
           >
              <h3 className="text-2xl font-bold text-textLight mb-6">
-              Bloom
-              <span className="text-primary"> Watch</span>
+              Green
+              <span className="text-primary">Cycle</span>
             </h3>
           </Link>
         )}

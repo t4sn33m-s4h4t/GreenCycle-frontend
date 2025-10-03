@@ -57,8 +57,8 @@ const Dashboard = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-textLight mb-6">
-              Bloom
-              <span className="text-primary"> Watch</span>
+              Green
+              <span className="text-primary">Cycle</span>
             </h1>
             <p className="text-textLight/70 text-xl max-w-3xl mx-auto">
               A platform for crop predictions, weather analytics, and data-driven farming decisions
@@ -74,7 +74,6 @@ const Dashboard = () => {
               <div
                 key={index}
                 className="bg-panel rounded-xl p-6 hover:bg-panel/80 transition-colors group cursor-pointer"
-                onClick={() => navigate(feature.link)}
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:scale-110 transition-transform">

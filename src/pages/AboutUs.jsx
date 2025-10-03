@@ -16,7 +16,7 @@ export default function AboutUs() {
         <header className="grid gap-8 lg:grid-cols-2 items-center mb-10">
           <div>
             <h1 className="text-5xl font-heading font-bold text-primary leading-tight">
-              BloomWatch
+              GreenCycle
             </h1>
             <p className="mt-4 text-lg text-textLight/80 max-w-xl">
               Visualize global flowering phenology through satellite observations.
@@ -77,7 +77,7 @@ export default function AboutUs() {
         {/* Long-form description */}
         <article className="bg-panel rounded-xl p-6 shadow-lg">
           <h2 className="text-2xl font-heading font-semibold text-primary mb-4">
-            Why BloomWatch?
+            Why GreenCycle?
           </h2>
           <p className="text-lg leading-relaxed text-textLight/80 mb-4">
             Seasonal flowering patterns are a fingerprint of ecosystem health, crop cycles, and

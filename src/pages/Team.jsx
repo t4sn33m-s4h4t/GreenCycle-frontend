@@ -38,7 +38,7 @@ const team = [
     role: "Backend Developer",
     email: "arnabxarnab06@gmail.com",
     website: "https://www.facebook.com/arnab.barua.2025/",
-    github: "https://github.com/your-profile",
+    github: "https://github.com",
     image: arnabImage,
   },
   {

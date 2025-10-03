@@ -43,7 +43,7 @@ const Solutions = () => {
         'Solar radiation tracking',
         'Humidity and wind pattern studies'
       ],
-      link: '/charts'
+      link: '/graph-chart'
     },
     {
       icon: MapPin,
