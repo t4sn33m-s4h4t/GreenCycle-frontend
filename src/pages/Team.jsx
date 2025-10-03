@@ -135,16 +135,16 @@ export default function Team() {
               {/* Short bio based on role */}
               <p className="mt-4 text-sm text-textLight/70">
                 {member.role === "Full Stack Developer"
-                  ? "Full-stack development and system architecture for BloomWatch."
+                  ? "Full-stack development and system architecture for GreenCycle"
                   : member.role === "Frontend Developer"
-                  ? "Building sleek UI and data interactions for BloomWatch."
+                  ? "Building sleek UI and data interactions for GreenCycle."
                   : member.role === "Backend Developer"
                   ? "Developing robust server infrastructure and APIs."
                   : member.role === "Designer"
-                  ? "Strategic designer and editor for BloomWatch platform."
+                  ? "Strategic designer and editor for GreenCycle platform."
                   : member.role === "UI/UX Designer"
                   ? "Creative design expert focused on user experience excellence."
-                  : "Passionate contributor to BloomWatch platform."}
+                  : "Passionate contributor to GreenCycle platform."}
               </p>
             </article>
           ))}
